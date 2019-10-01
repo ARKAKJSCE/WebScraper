@@ -16,10 +16,9 @@ def ParseYahoo(URL):
     
     n = int(input("Enter the  number of entries you want : "))
     for x in range(n):
-        
         sleep(40)
-        now = datetime.now().strftime('%H:%M:%S')
         try:
+                now = datetime.now().strftime('%H:%M:%S')
                 page = requests.get(URL, headers=UserAgentFunction())
                 soup = bs(page.content, 'lxml')
                 
@@ -52,6 +51,7 @@ def ParseYahoo(URL):
                 options.add_argument(f'user-agent={UserAgentFunction()}')
 
                 options.add_argument('--remote-debugging-port=9222')
+                now = datetime.now().strftime('%H:%M:%S')
 
                 browser = webdriver.Chrome(executable_path="C:\\Windows\\chromedriver.exe", options=options)
                 browser.get(URL)
@@ -86,9 +86,10 @@ def ParseYahoo(URL):
 def ParseMoneyRediff(URL):
     n = int(input("Enter the  number of entries you want : "))
     for x in range(n):
-        now = datetime.now().strftime('%H:%M:%S')
+        sleep(40)
+        
         try:
-            sleep(40)
+            now = datetime.now().strftime('%H:%M:%S')
             page = requests.get(URL, headers=UserAgentFunction())
             soup = bs(page.content, 'lxml')
 
