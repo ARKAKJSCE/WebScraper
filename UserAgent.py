@@ -36,8 +36,7 @@ def UserAgentFunction():
         "Thunderstorm/2.0"
         "Outlook-Express/7.3"
     ]
-    # user_agent = random.choice(user_agent_list)
-    user_agent = "Outlook-Express/7.3"
+    user_agent = random.choice(user_agent_list)
     #Set the headers 
     headers = {'User-Agent': user_agent, 'Accept':'text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8'}
     print("\nUser-Agent Sent : %s"%(user_agent))
