@@ -1,11 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-import time
-import shutil
 
 current_directory = os.getcwd()
-
 def Plot(csv):
 
     df = pd.read_csv(csv, encoding='utf-8')
@@ -24,7 +21,3 @@ def Plot(csv):
 
     plt.savefig(results_dir + sample_file_name)
     plt.show()
-    # time.sleep(5)
-    # plt.close()
-    # shutil.move((str(current_directory)+"\\Quote.png"), (str(file_path)+"\\Quote.png"))
-    
